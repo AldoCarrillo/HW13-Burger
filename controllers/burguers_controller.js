@@ -17,24 +17,20 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burguers", function (req, res) {
-  burguer.create(
-    ["burguer_name", "devoured"],
-    [req.body.burger_name, req.body.devoured],
-    function (result) {
-      // Send back the ID of the new quote
-      res.json({ id: result.insertId });
-    }
-  );
+  burguer.create(["burguer_name", "devoured"], [req.body.name, 0], function (
+    result
+  ) {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
+  });
 });
 
 router.put("/api/burguers/:id", function (req, res) {
   var condition = "id = " + req.params.id;
 
-  console.log("condition", condition);
-
   burguer.update(
     {
-      sleepy: req.body.sleepy,
+      devoured: req.body.devoured,
     },
     condition,
     function (result) {

@@ -1,32 +1,19 @@
 $(function () {
-  $(".devoured").on("click", function (event) {
-    var id = $(this).data("id");
-    var newSleep = $(this).data("newsleep");
+  $(".devour").on("click", function (event) {
+    var id = $(this).attr("id");
 
-    var newSleepState = {
-      sleepy: newSleep,
+    var newburguerState = {
+      devoured: 1,
     };
+
+    console.log("id button", id);
 
     // Send the PUT request.
     $.ajax("/api/burguers/" + id, {
       type: "PUT",
-      data: newSleepState,
+      data: newburguerState,
     }).then(function () {
-      console.log("changed sleep to", newSleep);
-      // Reload the page to get the updated list
-      location.reload();
-    });
-  });
-
-  $(".delcat").on("click", function (event) {
-    var id = $(this).data("id");
-
-    // Send the PUT request.
-    $.ajax("/api/burguers/" + id, {
-      type: "DELETE",
-      data: id,
-    }).then(function () {
-      console.log("Burguer deleted deleted", id);
+      console.log("changed burguer devoured");
       // Reload the page to get the updated list
       location.reload();
     });
@@ -36,15 +23,14 @@ $(function () {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    var newCat = {
-      name: $("#ca").val().trim(),
-      sleepy: $("[name=sleepy]:checked").val().trim(),
+    var newBurguer = {
+      name: $("#burgerText").val().trim(),
     };
 
     // Send the POST request.
     $.ajax("/api/burguers", {
       type: "POST",
-      data: newCat,
+      data: newBurguer,
     }).then(function () {
       console.log("created new burguer");
       // Reload the page to get the updated list

@@ -3,7 +3,7 @@ var orm = require("../config/orm.js");
 
 var burguer = {
   all: function (cb) {
-    orm.all("burgers", function (res) {
+    orm.all("burguers", function (res) {
       cb(res);
     });
   },
@@ -17,10 +17,6 @@ var burguer = {
     orm.update("burguers", objColVals, condition, function (res) {
       cb(res);
     });
-  },
-
-  delete: function ({ id }, callback) {
-    orm.delete("burguers", { id: id });
   },
 };
 

@@ -4,8 +4,10 @@
 
 <ul>
     {{#each burguers}}
-    <p><span class="label">Name:</span> {{this.burguer_name}}}</p>
-    <button type="devoured">Devoured Burguer</button>
+    {{#unless this.devoured}}
+    <p><span class="label">Name:</span> {{this.burguer_name}}</p>
+    <button class="devour" id={{this.id}}>Devour Burguer</button>
+    {{/unless}}
     {{/each}}
 </ul>
 
@@ -13,7 +15,12 @@
 
 <ul>
     {{#each burguers}}
+    {{#if this.devoured}}
     <p><span class="label">Name:</span> {{this.burguer_name}}</p>
+    {{/if}}
+
+
+
     {{/each}}
 </ul>
 
@@ -21,8 +28,8 @@
 <form class="create-form">
 
     <div class="form-group">
-        <label for="ca">Burguer Name:</label>
-        <input type="text" id="burger" name="name">
+        <label for="burgertext">Burguer Name:</label>
+        <input type="text" id="burgerText" name="name">
     </div>
 
 
