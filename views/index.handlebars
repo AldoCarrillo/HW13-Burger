@@ -1,22 +1,28 @@
-<h1>Burguers!</h1>
+<h1>Burguers Restaurant</h1>
 
-<h2>Burgers Ready!</h2>
+
+<h2 id="readyH2">Burgers Ready!</h2>
 
 <ul>
     {{#each burgers}}
     {{#unless this.devoured}}
-    <p><span class="label">Name:</span> {{this.burger_name}}</p>
-    <button class="devour" id={{this.id}}>Devour Burguer</button>
+    <div style="display: flex;">
+        <img src="../public/assets/img/burger.png" alt="burger" width="50" height="50">
+        <p class="burgerText"> {{this.burger_name}}</p>
+        <button class="devour" id={{this.id}}>Devour</button>
+
+    </div>
+
     {{/unless}}
     {{/each}}
 </ul>
 
-<h2>Burguers Devoured!</h2>
+<h2 id="devouredH2">Burguers Devoured!</h2>
 
 <ul>
     {{#each burgers}}
     {{#if this.devoured}}
-    <p><span class="label">Name:</span> {{this.burger_name}}</p>
+    <p class="burgerText"> {{this.burger_name}}</p>
     {{/if}}
 
 
@@ -24,14 +30,14 @@
     {{/each}}
 </ul>
 
-<h2>Add a Burguer</h2>
+<h2 id="newH2">Add a Burguer</h2>
 <form class="create-form">
 
     <div class="form-group">
-        <label for="burgertext">Burguer Name:</label>
+        <label for="burgertext" id="burgerLabel">Name:</label>
         <input type="text" id="burgerText" name="name">
     </div>
 
 
-    <button type="submit">Add Burguer</button>
+    <button type="submit" id="submit">Add</button>
 </form>

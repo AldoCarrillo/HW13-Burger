@@ -1,0 +1,54 @@
+body {
+  background-color: whitesmoke;
+  margin-left: 50px;
+}
+h1 {
+  color: dodgerblue;
+}
+
+#readyH2 {
+  color: red;
+}
+
+#devouredH2 {
+  color: green;
+}
+
+#newH2 {
+  color: navy;
+}
+
+.burgerText {
+  font-size: 25px;
+  color: black;
+}
+
+#burgerLabel {
+  color: navy;
+  font-size: large;
+}
+#burgerText {
+  height: 30px;
+  width: 200px;
+}
+
+#submit {
+  margin-left: 120px;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  font-size: 25px;
+  height: 40px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.devour {
+  margin-left: 10px;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  height: 40px;
+  margin-top: 20px;
+}
