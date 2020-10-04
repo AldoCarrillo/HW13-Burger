@@ -3,9 +3,9 @@
 <h2>Burgers Ready!</h2>
 
 <ul>
-    {{#each burguers}}
+    {{#each burgers}}
     {{#unless this.devoured}}
-    <p><span class="label">Name:</span> {{this.burguer_name}}</p>
+    <p><span class="label">Name:</span> {{this.burger_name}}</p>
     <button class="devour" id={{this.id}}>Devour Burguer</button>
     {{/unless}}
     {{/each}}
@@ -14,9 +14,9 @@
 <h2>Burguers Devoured!</h2>
 
 <ul>
-    {{#each burguers}}
+    {{#each burgers}}
     {{#if this.devoured}}
-    <p><span class="label">Name:</span> {{this.burguer_name}}</p>
+    <p><span class="label">Name:</span> {{this.burger_name}}</p>
     {{/if}}
 
 

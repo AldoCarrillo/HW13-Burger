@@ -1,11 +1,11 @@
 CREATE SCHEMA
-`burguer_db` ;
-USE "burguer_db";
+`burger_db` ;
+USE "burger_db";
 
-CREATE TABLE `burguer_db`.`burguers`
+CREATE TABLE `burger_db`.`burgers`
 (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `burguer_name` VARCHAR
+  `burger_name` VARCHAR
 (45) NOT NULL,
   `devoured` TINYINT NOT NULL,
   PRIMARY KEY

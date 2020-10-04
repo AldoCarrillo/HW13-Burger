@@ -1,15 +1,11 @@
+
 INSERT INTO `
-burguer_db`.`burguers
+burger_db`.`burgers
 `
-(`id`, `burguer_name`, `devoured`) VALUES
-('1', 'cheese burger', '0');
+(`id`, `burger_name`, `devoured`) VALUES
+('1', 'cheese buger', '0');
 INSERT INTO `
-burguer_db`.`burguers
+burger_db`.`burgers
 `
-(`id`, `burguer_name`, `devoured`) VALUES
+(`id`, `burger_name`, `devoured`) VALUES
 ('2', 'double cheese burger', '0');
-INSERT INTO `
-burguer_db`.`burguers
-`
-(`id`, `burguer_name`, `devoured`) VALUES
-('3', 'triple cheese burger', '0');
